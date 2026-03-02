@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIR & STEEL | Collectible Automotive Culture</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class', // Enable class-based dark mode
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Stevie Sans"', 'sans-serif'],
+              sans: ['"Stevie Sans"', 'sans-serif'],
+            },
+            colors: {
+              'premium-black': '#050505',
+              'premium-dark': '#0a0a0a',
+              'premium-paper': '#f4f4f0', // Light mode base
+              'steel-gray': '#1c1c1c',
+            },
+            backgroundImage: {
+              'noise': "url('https://grainy-gradients.vercel.app/noise.svg')",
+            },
+            letterSpacing: {
+              'tightest': '-0.05em',
+              'tighter': '-0.03em', // More aggressive tight tracking for headlines
+              'widest': '0.3em', // Wider tracking for labels (The Scan)
+            },
+            fontSize: {
+              '10xl': '10rem',
+              '11xl': '12rem',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f4f4f0; 
+        color: #1a1a1a;
+        font-family: 'Stevie Sans', sans-serif;
+        transition: background-color 0.5s ease, color 0.5s ease;
+        line-height: 1.4;
+      }
+      
+      .dark body {
+        background-color: #050505;
+        color: #e5e5e5;
+      }
+
+      @font-face {
+        font-family: 'Stevie Sans';
+        src: url('public/fonts/StevieSans-Regular.woff2') format('woff2'),
+             url('public/fonts/StevieSans-Regular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Stevie Sans';
+        src: url('public/fonts/StevieSans-Medium.woff2') format('woff2'),
+             url('public/fonts/StevieSans-Medium.woff') format('woff');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Stevie Sans';
+        src: url('public/fonts/StevieSans-Bold.woff2') format('woff2'),
+             url('public/fonts/StevieSans-Bold.woff') format('woff');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 4px;
+      }
+      .dark ::-webkit-scrollbar-track {
+        background: #0a0a0a;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #333;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.29.0",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body class="bg-premium-paper dark:bg-premium-black text-black dark:text-white transition-colors duration-500">
+    <div id="root"></div>
+  </body>
+</html>
